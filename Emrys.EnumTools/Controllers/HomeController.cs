@@ -21,9 +21,7 @@ namespace Emrys.EnumTools.Controllers
 
             int order;
             var des1 = Gender.Female.GetDescription(out order);
-            // des1 = “女性”, order= 2
-
-
+            // des1 = “女性”, order= 2 
 
             return View(new Person { Age = 1, Name = "Emrys", Gender = Gender.Male });
         }
