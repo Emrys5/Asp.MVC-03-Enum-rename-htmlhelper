@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using Emrys.EnumTools.Controllers
+
+@model Person
+
+
+
+<div class="form-group">
+    <h3>获取单个枚举描述</h3>
+<pre>
+@@Gender.Male.GetDescription()
+</pre>
+
+    @Gender.Male.GetDescription()
+
+    <hr />
+    <h3>
+        获取所有枚举
+    </h3>
+<pre>
+&lt;select class="form-control"&gt;
+@@{ var genders = EnumTools.GetAll(typeof(Gender));}  // 或者EnumTools.GetAll&lt;Gender&gt;()
+@@foreach (var item in genders)  
+{
+    &lt;option value="@@item.Key"&gt;
+        @@item.Value
+    &lt;/option&gt;
+} 
+&lt;/select&gt;
+
+</pre>
+    <select class="form-control">
+        @{ var genders = EnumTools.GetAll<Gender>();}
+        @foreach (var item in genders)
+        {
+            <option value="@item.Key">
+                @item.Value
+            </option>
+        }
+    </select>
+    <hr />
+    <h3>Html扩展直接用枚举</h3>
+    <h4>方式一</h4>
+<pre>
+    @@Html.EnumToolsSelect(typeof(Gender), 1,new { @@class= "form-control" })
+    或：
+    @@Html.EnumToolsSelect(typeof(Gender), (int)Gender.Male,new { @@class= "form-control" })
+</pre>
+
+    @(Html.EnumToolsSelect(typeof(Gender), (int)Gender.Male, new { @class = "form-control" }))
+
+
+    <h4>方式二</h4>
+<pre>
+    @@(Html.EnumToolsSelect&lt;Gender&gt;(3),new { @@class= "form-control" })
+    或：
+    @@(Html.EnumToolsSelect&lt;Gender&gt;(Gender.Female,new { @@class= "form-control" }))
+</pre>
+
+    @(Html.EnumToolsSelect<Gender>(new { id = "selectid" }))
+    @(Html.EnumToolsSelect<Gender>(Gender.Unknown))
+    @(Html.EnumToolsSelect<Gender>(1))
+    @(Html.EnumToolsSelect<Gender>(Gender.Female, new { @class = "form-control" }))
+    @(Html.EnumToolsSelect(typeof(Gender), 1))
+
+
+
+
+
+    <hr />
+    <h3>Html扩展 Model 枚举</h3>
+
+<pre>
+@@Html.EnumToolsSelectFor(i => i.Gender,new { @@class= "form-control" })
+</pre>
+    @Html.EnumToolsSelectFor(i => i.Gender)
+   
+</div>
