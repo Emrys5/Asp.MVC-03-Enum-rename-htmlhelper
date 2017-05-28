@@ -1,4 +1,4 @@
-<div id="cnblogs_post_body">
+ 
 
 ## 一、需求
 
@@ -421,12 +421,7 @@ cshtm调用
     <span style="color: #0000ff;"><</span><span style="color: #800000;">option</span> <span style="color: #ff0000;">value</span><span style="color: #0000ff;">="3"</span><span style="color: #0000ff;">></span>未知<span style="color: #0000ff;"></</span><span style="color: #800000;">option</span><span style="color: #0000ff;">></span>
     <span style="color: #0000ff;"><</span><span style="color: #800000;">option</span> <span style="color: #ff0000;">value</span><span style="color: #0000ff;">="4"</span><span style="color: #0000ff;">></span>人妖<span style="color: #0000ff;"></</span><span style="color: #800000;">option</span><span style="color: #0000ff;">></span>
 <span style="color: #0000ff;"></</span><span style="color: #800000;">select</span><span style="color: #0000ff;">></span></pre>
-
-</div>
-
-大功告成。
-
-Github:[https://github.com/Emrys5/Asp.MVC-03-Enum-rename-htmlhelper](https://github.com/Emrys5/Asp.MVC-03-Enum-rename-htmlhelper)
+  
 
 </div>
 更多详情请至：
