@@ -203,10 +203,10 @@ namespace Emrys.EnumTools
 
             // 设置id name的属性值
             var rvd = new RouteValueDictionary
-    {
-        { "id", modelMetadata.PropertyName },
-        { "name", modelMetadata.PropertyName }
-    };
+            {
+                { "id", modelMetadata.PropertyName },
+                { "name", modelMetadata.PropertyName }
+            };
 
             // 添加自定义属性
             if (htmlAttributes != null)
